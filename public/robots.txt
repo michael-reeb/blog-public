@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://www.michaelreeb.net/sitemap.xml
+Sitemap: //www.michaelreeb.net/sitemap.xml
