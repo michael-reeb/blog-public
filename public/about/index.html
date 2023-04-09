@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A blog about computers, adventures, and stuff like that.">
+    <title>Michael Reeb: Blog  | About</title>
+    
+    <link rel="stylesheet" href="https://michaelreeb.net/style.css?h=8b0c8e67741cde488629">
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;michaelreeb.net">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>About</h1>
+    
+    <div class="space"></div>
+    <p>G'day, I am Michael. I am a Computer Vision / Embedded Engineer, from Melbourne, Austraia.</p>
+<p>I also dabble in Game Dev, Home Automation, Computer Science, and Computer based things in general. I like to be busy and get a thrill out of designing and building things.
+Away from the keyboard, I like to read books, exercise/gym, do martial arts, and have fun adventures!</p>
+<h1 id="contact-me">Contact Me:</h1>
+<p>Not implemented yet, but via Linked In is best for now:</p>
+<ul>
+<li><a href="https://www.linkedin.com/in/michaelreeb/">LinkedIn</a></li>
+<li><a href="https://github.com/michael-reeb">GitHub</a></li>
+</ul>
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://michaelreeb.net/dark_mode.svg" width="24" height="24" alt="Dark mode" aria-label="dark mode toggle" title="Dark mode"></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://michaelreeb.net/light_mode.svg" width="24" height="24" alt="Light mode" aria-label="light mode toggle" title="Light mode"></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>
